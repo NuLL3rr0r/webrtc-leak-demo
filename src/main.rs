@@ -43,8 +43,10 @@ use maxminddb::{geoip2, MaxMindDBError};
 
 use actix_web::{web, App, HttpRequest, HttpResponse, HttpServer};
 
+const VERSION: &str = git_version::git_version!();
+
 #[derive(Parser, Debug)]
-#[command(author, version, about = "A WebRTC IP Leak Vulnerability Demonstration", long_about = None)]
+#[command(author, version = VERSION, about = "A WebRTC IP Leak Vulnerability Demonstration", long_about = None)]
 struct Args {
     #[arg(long, default_value = "0.0.0.0")]
     host: String,
