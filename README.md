@@ -34,23 +34,78 @@ FOR THE USAGE LICENSE SEE BELOW.
 
 ## Prerequisites
 
+- Git is required for checking out, and also building the source code as the version extraction relies on Git.
 - A stable or nightly Rust toolchain. For installation instructions [see here](https://rustup.rs/).
-- GNU Make (optional). For installation instructions on Windows [see here](#gnu-make-installation-on-microsoft-windows) and for FreeBSD [see here](#gnu-make-installation-on-freebsd). 
+- GNU Make (optional). For installation instructions on Windows [see here](#gnu-make-installation-on-microsoft-windows).
+- There might be other dependencies per platform or distro that you might be required to install as they might not come pre-installed with your operating system; Please refer to the distribution below in order to get a sense of what might be required.
 
-### GNU Make Installation on FreeBSD
+### Prerequisites installation on FreeBSD
 
-GNU Make on FreeBSD could be install either from source via the Ports system:
+On FreeBSD, the easiest way to install the dependencies would be to use the binary packages via pkgng:
 
 ```sh
-$ /usr/ports/devel/gmake/
+$ pkg update
+$ pkg install curl git gmake
+```
+
+Or, alternatively building the packages from source via the Ports system:
+
+```sh
+$ cd /usr/ports/ftp/curl
+$ make config-recursive
+$ make install
+
+$ cd /usr/ports/devel/git
+$ make config-recursive
+$ make install
+
+$ cd /usr/ports/devel/gmake
 $ make config-recursive
 $ make install
 ```
 
-Or as a binary package via pkgng:
+_Note__: <code>ftp/curl</code> is only required for Rust installation using the <code>rustup</code> method, as FreeBSD does not ship with cURL installed into the base system.
 
-```sh
-$ pkg install gmake
+### Prerequisites installation on Gentoo Linux
+
+```
+$ emerge --sync
+$ emerge -atuv dev-vcs/git
+```
+
+### Prerequisites installation on AlmaLinux
+
+```
+$ dnf check-update
+$ dnf install git make pkgconf gcc openssl-devel
+```
+
+### Prerequisites installation on CentOS
+
+```
+$ dnf check-update
+$ dnf install git make pkgconf gcc openssl-devel
+```
+
+### Prerequisites installation on Debian GNU/Linux
+
+```
+$ apt-get update
+$ apt install git make pkg-config build-essential libssl-dev
+```
+
+### Prerequisites installation on Rocky Linux
+
+```
+$ dnf check-update
+$ dnf install git make pkgconf gcc openssl-devel
+```
+
+### Prerequisites installation on Ubuntu
+
+```
+$ apt-get update
+$ apt install git make pkg-config build-essential libssl-dev
 ```
 
 ### GNU Make Installation on Microsoft Windows
