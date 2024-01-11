@@ -32,6 +32,10 @@ FOR THE USAGE LICENSE SEE BELOW.
 جهت مشاهده پروانه استفاده به انتها مراجعه نمایید.
 ```
 
+## Changelog
+
+[A comprehensive changelog](CHANGELOG.md) is being kept for this project. Prior to upgrading to any newer releases, kindly refer to the changelog to review the modifications that have been made.
+
 ## Prerequisites
 
 - Git is required for checking out, and also building the source code as the version extraction relies on Git.
