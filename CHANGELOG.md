@@ -16,11 +16,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Gentoo Linux prerequisites installation instructions.
 - Added RockyLinux prerequisites installation instructions.
 - Added Ubuntu prerequisites installation instructions.
+- Added GitHub CI/CD workflows.
+- Added the <code>fmt</code> make target.
 
 ### Fixed
 
 - Fixed FreeBSD prerequisites installation instructions.
 - Some minor documentation fixes.
+- Code formatting fixes.
 
 ### Changed
 
