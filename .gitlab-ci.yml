@@ -1,0 +1,31 @@
+stages:
+  - build
+
+rust-latest:
+  stage: build
+  image: rust:latest
+  before_script:
+    - rustup component add rustfmt
+    - rustup component add clippy
+    - cargo install cargo-audit
+  script:
+    - make info
+    - cargo fmt --check
+    - cargo clippy -- -W clippy::pedantic
+    - cargo audit
+    - cargo build --verbose
+    - cargo test --verbose
+
+rust-nightly:
+  stage: build
+  image: rustlang/rust:nightly
+  before_script:
+    - cargo install cargo-audit
+  script:
+    - make info
+    - cargo fmt --check
+    - cargo clippy -- -W clippy::pedantic
+    - cargo audit
+    - cargo build --verbose
+    - cargo test --verbose
+  allow_failure: true

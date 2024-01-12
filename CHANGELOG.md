@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added RockyLinux prerequisites installation instructions.
 - Added Ubuntu prerequisites installation instructions.
 - Added GitHub CI/CD workflows.
+- Added GitLab CI/CD workflows.
 - Added the <code>fmt</code> make target.
 
 ### Fixed
