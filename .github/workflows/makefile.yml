@@ -1,0 +1,30 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build information
+      run: make info
+
+    - name: Install build dependencies
+      run: make install-build-deps
+
+    - name: Formatting checkes
+      run: make fmt
+
+    - name: Clippy Linter
+      run: make clippy
+
+    - name: Audit vulnerabilities
+      run: make audit
