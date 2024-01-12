@@ -276,7 +276,13 @@ clippy:
 	@echo "Running the Rust clippy linter..."
 	@cargo clippy -- -W clippy::pedantic
 
+.PHONY: fmt
+fmt:
+	@echo "Running the Rust formatting check..."
+	@cargo fmt --check
+
 .PHONY: diag
+diag: fmt
 diag: clippy
 diag: audit
 
