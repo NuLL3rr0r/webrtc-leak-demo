@@ -28,3 +28,6 @@ jobs:
 
     - name: Audit vulnerabilities
       run: make audit
+
+    - name: Build
+      run: make
