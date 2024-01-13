@@ -278,7 +278,7 @@ clippy:
 
 .PHONY: fmt
 fmt:
-	@echo "Running the Rust formatting check..."
+	@echo "Running the Rust formatting checks..."
 	@cargo fmt --check
 
 .PHONY: diag
