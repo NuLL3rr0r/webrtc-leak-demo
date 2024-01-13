@@ -77,7 +77,7 @@ It's on my TODO list and will be coming soon :)
 ## Prerequisites
 
 - Git is required for checking out, and also building the source code as the version extraction relies on Git.
-- A stable or nightly Rust toolchain. For installation instructions [see here](https://rustup.rs/).
+- A stable or nightly Rust toolchain. For installation instructions on your desired platform follow the instructions on either [rustup.rs](https://rustup.rs/) or [rust-lang.org](https://www.rust-lang.org/tools/install).
 - GNU Make (optional). For installation instructions on Windows [see here](#gnu-make-installation-on-microsoft-windows).
 - There might be other dependencies per platform or distro that you might be required to install as they might not come pre-installed with your operating system; Please refer to the distribution below in order to get a sense of what might be required.
 
@@ -106,13 +106,18 @@ $ make config-recursive
 $ make install
 ```
 
-_Note__: <code>ftp/curl</code> is only required for Rust installation using the <code>rustup</code> method, as FreeBSD does not ship with cURL installed into the base system.
+And, finally install the Rust toolchain:
+
+```
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
 ### Prerequisites installation on Gentoo Linux
 
 ```
 $ emerge --sync
 $ emerge -atuv dev-vcs/git
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### Prerequisites installation on AlmaLinux
@@ -120,6 +125,7 @@ $ emerge -atuv dev-vcs/git
 ```
 $ dnf check-update
 $ dnf install git make pkgconf gcc openssl-devel
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### Prerequisites installation on CentOS
@@ -127,6 +133,7 @@ $ dnf install git make pkgconf gcc openssl-devel
 ```
 $ dnf check-update
 $ dnf install git make pkgconf gcc openssl-devel
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### Prerequisites installation on Debian GNU/Linux
@@ -134,6 +141,7 @@ $ dnf install git make pkgconf gcc openssl-devel
 ```
 $ apt-get update
 $ apt install git make pkg-config build-essential libssl-dev
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### Prerequisites installation on Rocky Linux
@@ -141,6 +149,7 @@ $ apt install git make pkg-config build-essential libssl-dev
 ```
 $ dnf check-update
 $ dnf install git make pkgconf gcc openssl-devel
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### Prerequisites installation on Ubuntu
@@ -148,15 +157,17 @@ $ dnf install git make pkgconf gcc openssl-devel
 ```
 $ apt-get update
 $ apt install git make pkg-config build-essential libssl-dev
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### GNU Make Installation on Microsoft Windows
 
-1. Download and install [Git for Windows](https://gitforwindows.org/).
-2. Obtain [a without-guile binary build of GNU Make for Windows from ezwinports](https://sourceforge.net/projects/ezwinports/files/), e.g. make-4.4.1-without-guile-w32-bin.zip
-3. <code>make-*-without-guile-w32-bin.zip/*</code> contents should be extracted and copied to your <code>Git\\mingw64\\</code> directory, e.g. <code>C:\\Program Files\\Git\\mingw64\\</code>, merging the folders, WITHOUT overwriting/replacing any existing files.
-4. Reboot
-5. Open a Git Bash terminal by right-clicking inside any (preferably empty folder) and issue the <code>make</code> command; after pressing the <code>Enter/Return</code> key you probably see a message like the following which means the installation has been done properly:
+1. Download and install the Rust toolchain and its dependencies according to the instructions from either the [rustup.rs](https://rustup.rs/) or [rust-lang.org](https://www.rust-lang.org/tools/install) websites.
+2. Download and install [Git for Windows](https://gitforwindows.org/).
+3. Obtain [a without-guile binary build of GNU Make for Windows from ezwinports](https://sourceforge.net/projects/ezwinports/files/), e.g. make-4.4.1-without-guile-w32-bin.zip
+4. <code>make-*-without-guile-w32-bin.zip/*</code> contents should be extracted and copied to your <code>Git\\mingw64\\</code> directory, e.g. <code>C:\\Program Files\\Git\\mingw64\\</code>, merging the folders, WITHOUT overwriting/replacing any existing files.
+5. Reboot
+6. Open a Git Bash terminal by right-clicking inside any (preferably empty folder) and issue the <code>make</code> command; after pressing the <code>Enter/Return</code> key you probably see a message like the following which means the installation has been done properly:
 
 ```sh
 > make

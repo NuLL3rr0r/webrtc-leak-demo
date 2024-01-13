@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added a changelog.
+- Added the <code>fmt</code> make target.
+- Added GitHub CI/CD workflows.
+- Added GitLab CI/CD workflows.
 - Added a TOC to the main <code>README.md</code> file.
 - Added AlmaLinux prerequisites installation instructions.
 - Added CentOS prerequisites installation instructions.
@@ -17,9 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Gentoo Linux prerequisites installation instructions.
 - Added RockyLinux prerequisites installation instructions.
 - Added Ubuntu prerequisites installation instructions.
-- Added GitHub CI/CD workflows.
-- Added GitLab CI/CD workflows.
-- Added the <code>fmt</code> make target.
 - Added a YouTube tutorials section to the main <code>README.md</code> file.
 
 ### Fixed
@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Version is now extracted from Git.
 - Moved the license section from the main <code>README.md</code> file to a separate <code>LICENSE.md</code> file.
+- Rust installation instructions.
 
 ## [0.1.0] - 2024-01-08
 
