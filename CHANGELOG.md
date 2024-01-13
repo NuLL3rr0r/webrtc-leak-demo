@@ -32,6 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Version is now extracted from Git.
+- The user name in the url now can either be set in plaintext or as a base64 string. The application takes care of which is which automatically.
+- For unknown users we won't be showing the 'Hello {UNKNOWN_USER}!' prompt anymore and instead opt for a plain 'Hello!'.
 - The index page has aesthetically been improved from a white/black foreground/background to an evil-hacker black/green terminal theme.
 - Moved the license section from the main <code>README.md</code> file to a separate <code>LICENSE.md</code> file.
 - Rust installation instructions.

