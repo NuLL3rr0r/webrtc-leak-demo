@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added a changelog.
+- Added a TOC to the main README.md file.
 - Added AlmaLinux prerequisites installation instructions.
 - Added CentOS prerequisites installation instructions.
 - Added Debian GNU/Linux prerequisites installation instructions.
@@ -23,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fixed FreeBSD prerequisites installation instructions.
-- Some minor documentation fixes.
+- Some other minor documentation fixes.
 - Code formatting fixes.
 
 ### Changed

@@ -2,6 +2,27 @@
 
 This is a WebRTC IP leak vulnerability demonstration written in the Rust programming language and JavaScript.
 
+## Table of Contents
+
+- [Disclaimer](#disclaimer)
+- [Changelog](#changelog)
+- [Prerequisites](#prerequisites)
+  - [Prerequisites installation on FreeBSD](#prerequisites-installation-on-freebsd)
+  - [Prerequisites installation on Gentoo Linux](#prerequisites-installation-on-gentoo-linux)
+  - [Prerequisites installation on AlmaLinux](#prerequisites-installation-on-almalinux)
+  - [Prerequisites installation on CentOS](#prerequisites-installation-on-centos)
+  - [Prerequisites installation on Debian GNU/Linux](#prerequisites-installation-on-debian-gnulinux)
+  - [Prerequisites installation on Rocky Linux](#prerequisites-installation-on-rocky-linux)
+  - [Prerequisites installation on Ubuntu](#prerequisites-installation-on-ubuntu)
+  - [GNU Make Installation on Microsoft Windows](#gnu-make-installation-on-microsoft-windows)
+- [Checkout](#checkout)
+- [Building](#building)
+  - [Debug Builds](#debug-builds)
+- [Running](#running)
+- [Usage](#usage)
+- [Obtaining a STUN server](#obtaining-a-stun-server)
+- [License](#license)
+
 ## Disclaimer
 
 ```
@@ -168,7 +189,7 @@ Regardless of using GNU Make or building on an unsupported platform, you could a
 $ cargo build --release
 ```
 
-## Debug Builds
+### Debug Builds
 
 By default invoking the <code>make</code> command triggers the release builds. Nonetheless, one could always specify the value of the <code>WEBRTC_LEAK_DEMO_BUILD_TYPE</code> variable on the command line as either <code>debug</code> or <code>release</code> for the desired build type:
 
