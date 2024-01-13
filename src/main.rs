@@ -60,7 +60,7 @@ use maxminddb::{geoip2, MaxMindDBError};
 
 use actix_web::{web, App, HttpRequest, HttpResponse, HttpServer};
 
-const VERSION: &str = git_version::git_version!();
+const VERSION: &str = git_version::git_version!(fallback = "{VERSION_UNKNOWN}");
 
 #[derive(Parser, Debug)]
 #[command(author, version = VERSION, about = "A WebRTC IP Leak Vulnerability Demonstration", long_about = None)]
