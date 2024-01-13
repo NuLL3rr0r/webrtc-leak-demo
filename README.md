@@ -8,6 +8,7 @@ This is a WebRTC IP leak vulnerability demonstration written in the Rust program
 - [License](#license)
 - [Changelog](#changelog)
 - [YouTube Tutorials](#youtube-tutorials)
+- [UpCloud Promo Code](#upcloud-promo-code)
 - [Prerequisites](#prerequisites)
   - [Prerequisites installation on FreeBSD](#prerequisites-installation-on-freebsd)
   - [Prerequisites installation on Gentoo Linux](#prerequisites-installation-on-gentoo-linux)
@@ -73,6 +74,10 @@ Everything in this repository is licensed under the terms of [the MIT License](L
 ## YouTube Tutorials
 
 It's on my TODO list and will be coming soon :)
+
+## UpCloud Promo Code
+
+I use UpCloud as my main cloud VPS provider in my development, testing, and production cycles. You'll receive a bonus worth of [€25 credits on UpCloud by signing up through the promo code A5X7BK](https://upcloud.com/signup/?promo=A5X7BK) which enables you to evaluate and utilize their infrastructure for free for a few months. This also supports my work in a small way, by allowing me to earn some extra credits on UpCloud.
 
 ## Prerequisites
 
