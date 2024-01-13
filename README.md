@@ -4,7 +4,7 @@ This is a WebRTC IP leak vulnerability demonstration written in the Rust program
 
 ## Table of Contents
 
-- [Disclaimer](#disclaimer)
+- [Legal Disclaimer](#legal-disclaimer)
 - [License](#license)
 - [Changelog](#changelog)
 - [Prerequisites](#prerequisites)
@@ -23,20 +23,24 @@ This is a WebRTC IP leak vulnerability demonstration written in the Rust program
 - [Usage](#usage)
 - [Obtaining a STUN server](#obtaining-a-stun-server)
 
-## Disclaimer
+## Legal Disclaimer
 
 ```
-THE CONTENT IS PROVIDED FOR EDUCATIONAL AND INFORMATIONAL PURPOSES ONLY WITHOUT
-ANY WARRANTIES, GUARANTEES, OR CONDITIONS, OF ANY KIND, AND MAY NOT BE ACCURATE,
-UP-TO-DATE, OR COMPLETE. ANY USE OR RELIANCE ON ANY CONTENT OR MATERIALS
-PUBLISHED, MENTIONED, OR LINKED HERE IS AT YOUR OWN RISK AND THE AUTHOR/AUTHORS
-ACCEPT NO LIABILITY OR RESPONSIBILITY FOR.
+THE CONTENT HEREIN IS PRESENTED SOLELY FOR EDUCATIONAL AND INFORMATIONAL
+PURPOSES, DEVOID OF ANY WARRANTIES, GUARANTEES, OR CONDITIONS. IT MAY NOT BE
+ACCURATE, UP-TO-DATE, OR COMPREHENSIVE. ANY UTILIZATION OR RELIANCE ON THE
+CONTENT OR MATERIALS PROVIDED, MENTIONED, OR LINKED HERE IS UNDERTAKEN AT YOUR
+OWN RISK, AND THE AUTHOR(S) DISCLAIM ANY LIABILITY OR RESPONSIBILITY.
 
-THE CODE PROVIDED IN THIS REPOSITORY IS FOR ACADEMIC AND EDUCATIONAL PURPOSES
-ONLY AND ANY MALICIOUS USE OF THIS SOFTWARE IS YOUR LEGAL LIABILITY AND ETHICAL
-RESPONSIBILITY.
+THE CODE WITHIN THIS REPOSITORY IS INTENDED EXCLUSIVELY FOR ACADEMIC AND
+EDUCATIONAL PURPOSES. ANY MALICIOUS USE OF THIS SOFTWARE IS THE LEGAL LIABILITY
+AND ETHICAL RESPONSIBILITY OF THE END USER. UTILIZING THIS TOOL FOR
+UNAUTHORIZED ATTACKS ON TARGETS IS ILLEGAL, AND THE END USER IS REQUIRED TO
+ADHERE TO ALL APPLICABLE LOCAL, STATE, AND FEDERAL LAWS. THE AUTHOR(S) BEAR NO
+LIABILITY AND DISCLAIM RESPONSIBILITY FOR ANY MISUSE OR DAMAGE RESULTING FROM
+THE UTILIZATION OF THIS PROGRAM OR THE PROVIDED CONTENT.
 
-FOR THE USAGE LICENSE SEE BELOW.
+FOR THE DETAILED USAGE LICENSE, KINDLY CONSULT THE ACCOMPANYING LICENSE.
 ```
 
 ```
@@ -47,10 +51,14 @@ FOR THE USAGE LICENSE SEE BELOW.
 مسئولیتی در مورد عواقب آن را نخواهند پذیرفت.
 
 کد ارائه شده در این مخزن تنها جهت مقاصد تحصیلی و آموزشی می‌باشد و هر گونه
-استفاده مخرب از این نرم افزار مسئولیت قانونی و  اخلاقی شما را به همراه خواهد
-داشت.
+استفاده مخرب از این نرم افزار مسئولیت قانونی و  اخلاقی کاربر استفاده کننده را به
+همراه خواهد داشت. استفاده از این ابزار جهت حملات غیرمجاز یا هداف گرفتن سایرین
+غیرقانونی است، و کاربر نهایی ملزم به رعایت تمامی قوانین محلی، ایالتی و فدرال
+مربوطه است. نگارنده یا نگارندگان هیچ‌گونه مسئولیتی را بر عهده نمی‌گیرند و از
+قبول مسئولیت در قبال هرگونه سوءاستفاده یا صدمه ناشی از استفاده از این برنامه
+یا محتوای ارائه شده معذور خواهند بود.
 
-جهت مشاهده پروانه استفاده به انتها مراجعه نمایید.
+جهت اطلاعات بیشتر در مورد مجوز استفاده، لطفا مجوز همراه را مطالعه نمایید.
 ```
 
 ## License
