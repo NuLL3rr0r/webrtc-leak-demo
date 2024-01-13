@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added a changelog.
-- Added a TOC to the main README.md file.
+- Added a TOC to the main <code>README.md</code> file.
 - Added AlmaLinux prerequisites installation instructions.
 - Added CentOS prerequisites installation instructions.
 - Added Debian GNU/Linux prerequisites installation instructions.
@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Version is now extracted from Git.
+- Moved the license section from the main <code>README.md</code> file to a separate <code>LICENSE.md</code> file.
 
 ## [0.1.0] - 2024-01-08
 

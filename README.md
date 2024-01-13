@@ -5,6 +5,7 @@ This is a WebRTC IP leak vulnerability demonstration written in the Rust program
 ## Table of Contents
 
 - [Disclaimer](#disclaimer)
+- [License](#license)
 - [Changelog](#changelog)
 - [Prerequisites](#prerequisites)
   - [Prerequisites installation on FreeBSD](#prerequisites-installation-on-freebsd)
@@ -21,7 +22,6 @@ This is a WebRTC IP leak vulnerability demonstration written in the Rust program
 - [Running](#running)
 - [Usage](#usage)
 - [Obtaining a STUN server](#obtaining-a-stun-server)
-- [License](#license)
 
 ## Disclaimer
 
@@ -52,6 +52,10 @@ FOR THE USAGE LICENSE SEE BELOW.
 
 جهت مشاهده پروانه استفاده به انتها مراجعه نمایید.
 ```
+
+## License
+
+Everything in this repository is licensed under the terms of [the MIT License](LICENSE.md).
 
 ## Changelog
 
@@ -246,31 +250,3 @@ Options:
 ## Obtaining a STUN server
 
 By default, we use <code>stun:stun.l.google.com:19302</code> as our STUN server. In case for any reason it happens to be down, you could always obtain an alternative STUN server from the [pradt2/always-online-stun](https://github.com/pradt2/always-online-stun) project and replace it inside the <code>src/main.rs</code> file.
-
-## License
-
-Everything in this repository is licensed under the terms of the MIT License. Below is the MIT License:
-
-```
-(The MIT License)
-
-Copyright (c) 2024 Mamadou Babaei
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
