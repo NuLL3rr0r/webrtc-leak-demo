@@ -21,7 +21,7 @@ jobs:
       run: make install-build-deps
 
     - name: Formatting checkes
-      run: make fmt
+      run: make fmt-check
 
     - name: Clippy Linter
       run: make clippy

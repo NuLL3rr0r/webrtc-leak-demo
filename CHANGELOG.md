@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added a changelog.
-- Added the <code>fmt</code> make target.
+- Added the <code>fmt-check</code> make target.
 - Added GitHub CI/CD workflows.
 - Added GitLab CI/CD workflows.
 - Added a TOC to the main <code>README.md</code> file.
