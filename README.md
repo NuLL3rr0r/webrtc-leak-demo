@@ -139,7 +139,7 @@ $ apt install git make pkg-config build-essential libssl-dev
 
 ### GNU Make Installation on Microsoft Windows
 
-1. Download and install [Git for Windows].
+1. Download and install [Git for Windows](https://gitforwindows.org/).
 2. Obtain [a without-guile binary build of GNU Make for Windows from ezwinports](https://sourceforge.net/projects/ezwinports/files/), e.g. make-4.4.1-without-guile-w32-bin.zip
 3. <code>make-*-without-guile-w32-bin.zip/*</code> contents should be extracted and copied to your <code>Git\\mingw64\\</code> directory, e.g. <code>C:\\Program Files\\Git\\mingw64\\</code>, merging the folders, WITHOUT overwriting/replacing any existing files.
 4. Reboot
