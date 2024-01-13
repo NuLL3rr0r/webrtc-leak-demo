@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added GitHub CI/CD workflows.
 - Added GitLab CI/CD workflows.
 - Added the <code>fmt</code> make target.
+- Added a YouTube tutorials section to the main <code>README.md</code> file.
 
 ### Fixed
 
