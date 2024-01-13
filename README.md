@@ -201,7 +201,7 @@ By default invoking the <code>make</code> command triggers the release builds. N
 $ make WEBRTC_LEAK_DEMO_BUILD_TYPE=debug
 ```
 
-On the contrary, invoking the <code>cargo build</code> command without the <code>--release</code> flag triggers the debug builds
+On the contrary, invoking the <code>cargo build</code> command without the <code>--release</code> flag triggers the debug build:
 
 ```sh
 $ cargo build
