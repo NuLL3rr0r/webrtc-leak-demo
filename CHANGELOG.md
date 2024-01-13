@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Version is now extracted from Git.
+- The index page has aesthetically been improved from a white/black foreground/background to an evil-hacker black/green terminal theme.
 - Moved the license section from the main <code>README.md</code> file to a separate <code>LICENSE.md</code> file.
 - Rust installation instructions.
 
