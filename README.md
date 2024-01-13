@@ -112,6 +112,12 @@ And, finally install the Rust toolchain:
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
+Also, depending on the shell that you're utilizing, after all the installation steps and prior to proceeding further, you might be required to run the <code>rehash</code> command in order to update the command search path used by the shell:
+
+```
+$ rehash
+```
+
 ### Prerequisites installation on Gentoo Linux
 
 ```
