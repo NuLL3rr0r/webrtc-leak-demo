@@ -140,11 +140,11 @@ WEBRTC_LEAK_DEMO_STAGE_DIR	:=	"$(WEBRTC_LEAK_DEMO_ROOT_DIR)"/stage
 
 WEBRTC_LEAK_DEMO_GIT_TREE_STATE_DIRTY	:=	dirty
 
-WEBRTC_LEAK_DEMO_GIT_BRANCH			:=	$(shell git rev-parse --abbrev-ref HEAD)
-WEBRTC_LEAK_DEMO_GIT_TAG			:=	$(shell git describe --tags --abbrev=0 2>/dev/null)
-WEBRTC_LEAK_DEMO_GIT_COMMIT			:=	$(shell git rev-parse --short HEAD)
+WEBRTC_LEAK_DEMO_GIT_BRANCH					:=	$(shell git rev-parse --abbrev-ref HEAD)
+WEBRTC_LEAK_DEMO_GIT_TAG					:=	$(shell git describe --tags --abbrev=0 2>/dev/null)
+WEBRTC_LEAK_DEMO_GIT_COMMIT					:=	$(shell git rev-parse --short HEAD)
 WEBRTC_LEAK_DEMO_GIT_COMMIT_NUMS_SINCE_TAG	:=	$(shell git rev-list --count HEAD ^`git describe --tags --abbrev=0`)
-WEBRTC_LEAK_DEMO_GIT_TREE_STATE			:=	$(shell test -n "`git status --porcelain`" && echo "dirty" || echo "clean")
+WEBRTC_LEAK_DEMO_GIT_TREE_STATE				:=	$(shell test -n "`git status --porcelain`" && echo "dirty" || echo "clean")
 
 ifeq ($(strip $(WEBRTC_LEAK_DEMO_GIT_TAG)),)
 ifeq ($(strip $(WEBRTC_LEAK_DEMO_GIT_COMMIT)),)
@@ -168,19 +168,19 @@ ifeq ($(WEBRTC_LEAK_DEMO_GIT_TREE_STATE),$(WEBRTC_LEAK_DEMO_GIT_TREE_STATE_DIRTY
 WEBRTC_LEAK_DEMO_VERSION	:=	$(WEBRTC_LEAK_DEMO_VERSION)-modified
 endif # ($(WEBRTC_LEAK_DEMO_GIT_TREE_STATE),$(WEBRTC_LEAK_DEMO_GIT_TREE_STATE_DIRTY))
 
-WEBRTC_LEAK_DEMO_VERSION_MAJOR = $(shell echo $(WEBRTC_LEAK_DEMO_GIT_TAG) | cut -d '.' -f 1 | tr -d -c 0-9)
+WEBRTC_LEAK_DEMO_VERSION_MAJOR	:=	$(shell echo $(WEBRTC_LEAK_DEMO_GIT_TAG) | cut -d '.' -f 1 | tr -d -c 0-9)
 ifeq ($(WEBRTC_LEAK_DEMO_VERSION_MAJOR),)
-WEBRTC_LEAK_DEMO_VERSION_MAJOR	:= 0
+WEBRTC_LEAK_DEMO_VERSION_MAJOR	:=	0
 endif
 
-WEBRTC_LEAK_DEMO_VERSION_MINOR = $(shell echo $(WEBRTC_LEAK_DEMO_GIT_TAG) | cut -d '.' -f 2 | tr -d -c 0-9)
+WEBRTC_LEAK_DEMO_VERSION_MINOR	:=	$(shell echo $(WEBRTC_LEAK_DEMO_GIT_TAG) | cut -d '.' -f 2 | tr -d -c 0-9)
 ifeq ($(WEBRTC_LEAK_DEMO_VERSION_MINOR),)
-WEBRTC_LEAK_DEMO_VERSION_MINOR	:= 0
+WEBRTC_LEAK_DEMO_VERSION_MINOR	:=	0
 endif
 
-WEBRTC_LEAK_DEMO_VERSION_PATCH = $(shell echo $(WEBRTC_LEAK_DEMO_GIT_TAG) | cut -d '.' -f 3 | tr -d -c 0-9)
+WEBRTC_LEAK_DEMO_VERSION_PATCH	:=	$(shell echo $(WEBRTC_LEAK_DEMO_GIT_TAG) | cut -d '.' -f 3 | tr -d -c 0-9)
 ifeq ($(WEBRTC_LEAK_DEMO_VERSION_PATCH),)
-WEBRTC_LEAK_DEMO_VERSION_PATCH	:= 0
+WEBRTC_LEAK_DEMO_VERSION_PATCH	:=	0
 endif
 
 WEBRTC_LEAK_DEMO_BUILD_HOST	:=	$(shell hostname)
