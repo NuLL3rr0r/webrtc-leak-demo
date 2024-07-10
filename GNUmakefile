@@ -68,12 +68,12 @@ endif # ($(OS),Windows_NT)
 # Target Settings
 ################################################################################
 
-WEBRTC_LEAK_DEMO_TARGET_NAME			:=	webrtc-leak-demo
+WEBRTC_LEAK_DEMO_TARGET_NAME		:=	webrtc-leak-demo
 WEBRTC_LEAK_DEMO_TARGET_NAME_FREEBSD	:=	$(WEBRTC_LEAK_DEMO_TARGET_NAME)
-WEBRTC_LEAK_DEMO_TARGET_NAME_LINUX		:=	$(WEBRTC_LEAK_DEMO_TARGET_NAME)
-WEBRTC_LEAK_DEMO_TARGET_NAME_WINDOWS		:=	$(WEBRTC_LEAK_DEMO_TARGET_NAME).exe
+WEBRTC_LEAK_DEMO_TARGET_NAME_LINUX	:=	$(WEBRTC_LEAK_DEMO_TARGET_NAME)
+WEBRTC_LEAK_DEMO_TARGET_NAME_WINDOWS	:=	$(WEBRTC_LEAK_DEMO_TARGET_NAME).exe
 
-WEBRTC_LEAK_DEMO_SOURCE_DIR		:=	"$(WEBRTC_LEAK_DEMO_ROOT_DIR)"
+WEBRTC_LEAK_DEMO_SOURCE_DIR	:=	"$(WEBRTC_LEAK_DEMO_ROOT_DIR)"
 
 WEBRTC_LEAK_DEMO_MANIFEST_FILE	:=	"$(WEBRTC_LEAK_DEMO_SOURCE_DIR)"/Cargo.toml
 
@@ -140,11 +140,11 @@ WEBRTC_LEAK_DEMO_STAGE_DIR	:=	"$(WEBRTC_LEAK_DEMO_ROOT_DIR)"/stage
 
 WEBRTC_LEAK_DEMO_GIT_TREE_STATE_DIRTY	:=	dirty
 
-WEBRTC_LEAK_DEMO_GIT_BRANCH					:=	$(shell git rev-parse --abbrev-ref HEAD)
-WEBRTC_LEAK_DEMO_GIT_TAG					:=	$(shell git describe --tags --abbrev=0 2>/dev/null)
-WEBRTC_LEAK_DEMO_GIT_COMMIT					:=	$(shell git rev-parse --short HEAD)
-WEBRTC_LEAK_DEMO_GIT_COMMIT_NUMS_SINCE_TAG	:=	$(shell git rev-list --count HEAD ^`git describe --tags --abbrev=0`)
-WEBRTC_LEAK_DEMO_GIT_TREE_STATE				:=	$(shell test -n "`git status --porcelain`" && echo "dirty" || echo "clean")
+WEBRTC_LEAK_DEMO_GIT_BRANCH			:=	$(shell git rev-parse --abbrev-ref HEAD 2>/dev/null)
+WEBRTC_LEAK_DEMO_GIT_TAG			:=	$(shell git describe --tags --abbrev=0 2>/dev/null)
+WEBRTC_LEAK_DEMO_GIT_COMMIT			:=	$(shell git rev-parse --short HEAD 2>/dev/null)
+WEBRTC_LEAK_DEMO_GIT_COMMIT_NUMS_SINCE_TAG	:=	$(shell git rev-list --count HEAD ^`git describe --tags --abbrev=0 2>/dev/null` 2>/dev/null)
+WEBRTC_LEAK_DEMO_GIT_TREE_STATE			:=	$(shell test -n "`git status --porcelain 2>/dev/null`" && echo "dirty" || echo "clean")
 
 ifeq ($(strip $(WEBRTC_LEAK_DEMO_GIT_TAG)),)
 ifeq ($(strip $(WEBRTC_LEAK_DEMO_GIT_COMMIT)),)
