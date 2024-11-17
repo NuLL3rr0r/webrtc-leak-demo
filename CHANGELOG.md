@@ -37,6 +37,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The index page has aesthetically been improved from a white/black foreground/background to an evil-hacker black/green terminal theme.
 - Moved the license section from the main `README.md` file to a separate `LICENSE.md` file.
 - Rust installation instructions.
+- Bumped actix-web to `v4.9.0`.
+- Bumped base64 to `v0.22.1`.
+- Bumped clap to `v4.5.21`.
+- Bumped maxminddb to `v0.24.0`.
+- Bumped parking_lot to `v0.12.3`.
+- Bumped regex to `v1.11.1`.
+- Bumped reqwest to `v0.12.9`.
+- Bumped serde to `v1.0.215`.
+- Bumped tempfile to `v3.14.0`.
+- Bumped url to `v2.5.3`.
 
 ## [0.1.0] - 2024-01-08
 
