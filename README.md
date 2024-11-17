@@ -250,6 +250,14 @@ If the build process encounters failures due to detected vulnerabilities, you ca
 $ make DISABLE_VULNERABILITY_AUDIT=y
 ```
 
+### Enforcing a Specific Rust Version
+
+Due to changes in the Rust language or compiler, some dependency crates might fail to build with the latest Rust versions. To address this, you can specify a particular Rust version to be used for the build process. For example:
+
+```sh
+$ make RUST_VERSION_OVERRIDE=1.79.0
+```
+
 ## Running
 
 To run the server from your terminal window, in case you used the `make` command:

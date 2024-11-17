@@ -319,7 +319,18 @@ build-platform-not-supported:
 build-type-not-supported:
 	$(error Target build type is not supported!)
 
+.PHONY: build-enforce-rust-version-override
+build-enforce-rust-version-override:
+ifdef RUST_VERSION_OVERRIDE
+	@echo "Enforcing Rust version override: $(RUST_VERSION_OVERRIDE)"
+	@rustup install $(RUST_VERSION_OVERRIDE)
+	@rustup override set $(RUST_VERSION_OVERRIDE)
+else
+	@echo "RUST_VERSION_OVERRIDE is not set; using the current default Rust version..."
+endif
+
 .PHONY: build
+build: build-enforce-rust-version-override
 build: build-webrtc-leak-demo
 
 .PHONY: build-webrtc-leak-demo

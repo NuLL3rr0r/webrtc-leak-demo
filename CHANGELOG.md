@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Ubuntu prerequisites installation instructions.
 - Added a YouTube tutorials section to the main `README.md` file.
 - Introduced `DISABLE_VULNERABILITY_AUDIT` to allow users to explicitly disable vulnerability audits, providing a workaround for build failures caused by detected vulnerabilities.
+- Introduced `RUST_VERSION_OVERRIDE` to enable users to explicitly specify a Rust version, addressing potential build failures with newer Rust versions.
 
 ### Fixed
 
