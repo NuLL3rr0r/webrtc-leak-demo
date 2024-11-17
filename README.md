@@ -117,7 +117,7 @@ And, finally install the Rust toolchain:
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Also, depending on the shell that you're utilizing, after all the installation steps and prior to proceeding further, you might be required to run the <code>rehash</code> command in order to update the command search path used by the shell:
+Also, depending on the shell that you're utilizing, after all the installation steps and prior to proceeding further, you might be required to run the `rehash` command in order to update the command search path used by the shell:
 
 ```
 $ rehash
@@ -176,9 +176,9 @@ $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 1. Download and install the Rust toolchain and its dependencies according to the instructions from either the [rustup.rs](https://rustup.rs/) or [rust-lang.org](https://www.rust-lang.org/tools/install) websites.
 2. Download and install [Git for Windows](https://gitforwindows.org/).
 3. Obtain [a without-guile binary build of GNU Make for Windows from ezwinports](https://sourceforge.net/projects/ezwinports/files/), e.g. make-4.4.1-without-guile-w32-bin.zip
-4. <code>make-*-without-guile-w32-bin.zip/*</code> contents should be extracted and copied to your <code>Git\\mingw64\\</code> directory, e.g. <code>C:\\Program Files\\Git\\mingw64\\</code>, merging the folders, WITHOUT overwriting/replacing any existing files.
+4. `make-*-without-guile-w32-bin.zip/*` contents should be extracted and copied to your `Git\\mingw64\\` directory, e.g. `C:\\Program Files\\Git\\mingw64\\`, merging the folders, WITHOUT overwriting/replacing any existing files.
 5. Reboot
-6. Open a Git Bash terminal by right-clicking inside any (preferably empty folder) and issue the <code>make</code> command; after pressing the <code>Enter/Return</code> key you probably see a message like the following which means the installation has been done properly:
+6. Open a Git Bash terminal by right-clicking inside any (preferably empty folder) and issue the `make` command; after pressing the `Enter/Return` key you probably see a message like the following which means the installation has been done properly:
 
 ```sh
 > make
@@ -230,13 +230,13 @@ $ cargo build --release
 
 ### Debug Builds
 
-By default invoking the <code>make</code> command triggers the release builds. Nonetheless, one could always specify the value of the <code>WEBRTC_LEAK_DEMO_BUILD_TYPE</code> variable on the command line as either <code>debug</code> or <code>release</code> for the desired build type:
+By default invoking the `make` command triggers the release builds. Nonetheless, one could always specify the value of the `WEBRTC_LEAK_DEMO_BUILD_TYPE` variable on the command line as either `debug` or `release` for the desired build type:
 
 ```sh
 $ make WEBRTC_LEAK_DEMO_BUILD_TYPE=debug
 ```
 
-On the contrary, invoking the <code>cargo build</code> command without the <code>--release</code> flag triggers the debug build:
+On the contrary, invoking the `cargo build` command without the `--release` flag triggers the debug build:
 
 ```sh
 $ cargo build
@@ -244,19 +244,19 @@ $ cargo build
 
 ## Running
 
-To run the server from your terminal window, in case you used the <code>make</code> command:
+To run the server from your terminal window, in case you used the `make` command:
 
 ```sh
 $ ./stage/webrtc-leak-demo
 ```
 
-Otherwise, if you invoked the <code>cargo build --release</code> command directly:
+Otherwise, if you invoked the `cargo build --release` command directly:
 
 ```sh
 $ ./target/release/webrtc-leak-demo
 ```
 
-And, accordingly for the <code>cargo build</code> command without the <code>--release</code> flag:
+And, accordingly for the `cargo build` command without the `--release` flag:
 
 ```sh
 $ ./target/debug/webrtc-leak-demo
@@ -284,4 +284,4 @@ Options:
 
 ## Obtaining a STUN server
 
-By default, we use <code>stun:stun.l.google.com:19302</code> as our STUN server. In case for any reason it happens to be down, you could always obtain an alternative STUN server from the [pradt2/always-online-stun](https://github.com/pradt2/always-online-stun) project and replace it inside the <code>src/main.rs</code> file.
+By default, we use `stun:stun.l.google.com:19302` as our STUN server. In case for any reason it happens to be down, you could always obtain an alternative STUN server from the [pradt2/always-online-stun](https://github.com/pradt2/always-online-stun) project and replace it inside the `src/main.rs` file.
