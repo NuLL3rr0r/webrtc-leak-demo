@@ -297,7 +297,11 @@ fmt-check:
 .PHONY: diag
 diag: fmt-check
 diag: clippy
+ifeq ($(DISABLE_VULNERABILITY_AUDIT),y)
+	@echo "Skipping audit due to DISABLE_VULNERABILITY_AUDIT=y..."
+else
 diag: audit
+endif
 
 ################################################################################
 # Make Targets - Build

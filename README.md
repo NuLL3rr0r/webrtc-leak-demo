@@ -242,6 +242,14 @@ On the contrary, invoking the `cargo build` command without the `--release` flag
 $ cargo build
 ```
 
+### Disabling Vulnerability Audit
+
+If the build process encounters failures due to detected vulnerabilities, you can explicitly disable the vulnerability audit by restarting the build with the following command:
+
+```sh
+$ make DISABLE_VULNERABILITY_AUDIT=y
+```
+
 ## Running
 
 To run the server from your terminal window, in case you used the `make` command:

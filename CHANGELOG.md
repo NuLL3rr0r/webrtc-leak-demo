@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added RockyLinux prerequisites installation instructions.
 - Added Ubuntu prerequisites installation instructions.
 - Added a YouTube tutorials section to the main `README.md` file.
+- Introduced `DISABLE_VULNERABILITY_AUDIT` to allow users to explicitly disable vulnerability audits, providing a workaround for build failures caused by detected vulnerabilities.
 
 ### Fixed
 
