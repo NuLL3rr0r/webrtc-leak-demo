@@ -56,6 +56,9 @@ use regex::Regex;
 use tempfile::TempDir;
 use url::Url;
 
+use base64::engine::general_purpose;
+use base64::Engine;
+
 use maxminddb::{geoip2, MaxMindDBError};
 
 use actix_web::{web, App, HttpRequest, HttpResponse, HttpServer};
@@ -294,7 +297,7 @@ fn get_geo_data(database_path: &str, ip: &str) -> GeoData {
 }
 
 fn decode_username(user: &str) -> String {
-    if let Ok(decoded_bytes) = base64::decode(user) {
+    if let Ok(decoded_bytes) = general_purpose::STANDARD.decode(user) {
         if let Ok(decoded_username) = String::from_utf8(decoded_bytes) {
             return decoded_username;
         }
