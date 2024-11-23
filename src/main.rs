@@ -491,9 +491,9 @@ async fn record_leaked_ips(
 ) -> HttpResponse {
     let user = record_request.user.clone().unwrap_or_default();
     let username = if user.is_empty() {
-        decode_username(user.as_str())
-    } else {
         String::from("{UNKNOWN_USER}")
+    } else {
+        decode_username(user.as_str())
     };
 
     let leaked_ips = record_request.leaked_ips.clone().unwrap_or_default();
