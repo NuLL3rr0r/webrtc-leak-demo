@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added the `fmt-check` make target.
 - Added GitHub CI/CD workflows.
 - Added GitLab CI/CD workflows.
-- Added a TOC to the main `README.md` file.
+- Added a TOC to the main [`README.md`](README.md) file.
 - Added AlmaLinux prerequisites installation instructions.
 - Added CentOS prerequisites installation instructions.
 - Added Debian GNU/Linux prerequisites installation instructions.
@@ -39,7 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The user name in the url now can either be set in plaintext or as a base64 string. The application takes care of which is which automatically.
 - For unknown users we won't be showing the 'Hello {UNKNOWN_USER}!' prompt anymore and instead opt for a plain 'Hello!'.
 - The index page has aesthetically been improved from a white/black foreground/background to an evil-hacker black/green terminal theme.
-- Moved the license section from the main `README.md` file to a separate `LICENSE.md` file.
+- Moved the license section from the main [`README.md`](README.md) file to a separate [`LICENSE.md`](LICENSE.md) file.
 - Rust installation instructions.
 - Bumped actix-web to `v4.9.0`.
 - Bumped base64 to `v0.22.1`.
