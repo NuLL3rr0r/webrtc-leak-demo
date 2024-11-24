@@ -28,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fix a Microsoft Windows build failure caused by a typo in a variable name inside the GNU Make build script.
 - Fix FreeBSD prerequisites installation instructions.
-- Fix base64 deprectation warnings.
+- Fix base64 deprecation warnings.
 - Fix a username recording bug where any plain or base64-decoded usernames are reported as `{UNKNOWN_USER}`.
 - Some other minor build and documentation fixes.
 - Code formatting fixes.
@@ -36,8 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Version is now extracted from Git.
-- The user name in the url now can either be set in plaintext or as a base64 string. The application takes care of which is which automatically.
-- For unknown users we won't be showing the 'Hello {UNKNOWN_USER}!' prompt anymore and instead opt for a plain 'Hello!'.
+- The username in the URL now can either be set in plaintext or as a base64 string. The application takes care of which is which automatically.
+- For unknown users, we won't be showing the 'Hello {UNKNOWN_USER}!' prompt anymore and instead opt for a plain 'Hello!'.
 - The index page has aesthetically been improved from a white/black foreground/background to an evil-hacker black/green terminal theme.
 - Moved the license section from the main [`README.md`](README.md) file to a separate [`LICENSE.md`](LICENSE.md) file.
 - Rust installation instructions.
