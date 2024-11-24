@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Gentoo Linux prerequisites installation instructions.
 - Added RockyLinux prerequisites installation instructions.
 - Added Ubuntu prerequisites installation instructions.
-- Added a YouTube tutorials section to the main `README.md` file.
+- Updated the [`README.md`](README.md) file to include a new [YouTube Tutorials](README.md/#youtube-tutorials) section, providing direct links to both the English and Farsi tutorial videos.
 - Introduced `DISABLE_VULNERABILITY_AUDIT` to allow users to explicitly disable vulnerability audits, providing a workaround for build failures caused by detected vulnerabilities.
 - Introduced `RUST_VERSION_OVERRIDE` to enable users to explicitly specify a Rust version, addressing potential build failures with newer Rust versions.
 

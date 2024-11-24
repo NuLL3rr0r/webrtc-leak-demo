@@ -73,7 +73,15 @@ Everything in this repository is licensed under the terms of [the MIT License](L
 
 ## YouTube Tutorials
 
-It's on my TODO list and will be coming soon :)
+You can watch this tutorial on YouTube:
+
+- The English video tutorial:
+
+[![WebRTC IP Leak Vulnerability Demonstration using Rust and JavaScript](https://img.youtube.com/vi/1YX1Jyo8Hqo/0.jpg)](https://youtu.be/1YX1Jyo8Hqo)
+
+- The video tutorial in Persian:
+
+[![نمایش آسیب‌پذیری نشت IP در WebRTC با استفاده از Rust و جاوا اسکریپت](https://img.youtube.com/vi/SjK7dnZXJRQ/0.jpg)](https://youtu.be/SjK7dnZXJRQ)
 
 ## UpCloud Promo Code
 
